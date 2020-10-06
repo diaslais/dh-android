@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Conversor</string>
+    <string name="txt_titulo">Temperatura em °C</string>
+    <string name="hint_temperatura">Digite a temperatura</string>
+    <string name="btn_converter">Converter</string>
+    <string name="result">%.1f °F</string>
+</resources>
