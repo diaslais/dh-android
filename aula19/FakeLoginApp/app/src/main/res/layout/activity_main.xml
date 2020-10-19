@@ -40,16 +40,18 @@
         android:layout_gravity="center|center_vertical">
 
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/e_mail"
             android:singleLine="true"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite"
             android:backgroundTint="@color/colorWhite"/>
 
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
@@ -59,17 +61,20 @@
             android:layout_marginTop="20dp"/>
 
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:textColor="@color/colorMain"
             android:layout_gravity="center"
             android:text="@string/log_in"
+            android:inputType="textPassword"
             android:textSize="16sp"
             android:background="@color/colorWhite"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:layout_marginTop="50dp"/>
 
         <Button
+            android:id="@+id/btnCreateAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
@@ -78,5 +83,5 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
-    
+
 </LinearLayout>
