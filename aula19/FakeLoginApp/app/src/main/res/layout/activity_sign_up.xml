@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorMain"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
-        android:text="@string/login"
-        android:textColor="@color/colorWhite"
+        android:text="SIGN UP"
+        android:textColor="@color/colorMain"
         android:textSize="34sp"
         android:layout_marginTop="80dp"/>
 
@@ -25,8 +25,8 @@
         android:layout_marginBottom="60dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-light"
-        android:text="@string/to_continue"
-        android:textColor="@color/colorWhite"
+        android:text="FOR YOUR ACCOUNT"
+        android:textColor="@color/colorMain"
         android:textSize="16sp"
         android:letterSpacing="0.3"
         android:textStyle="bold" />
@@ -40,46 +40,66 @@
         android:layout_gravity="center|center_vertical">
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edt2Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:singleLine="true"
+            android:inputType="text"
+            android:textColor="@color/colorMain"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/edt2Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/e_mail"
             android:singleLine="true"
             android:inputType="textEmailAddress"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorWhite"
-            android:backgroundTint="@color/colorWhite"/>
+            android:textColor="@color/colorMain"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"
+            android:layout_marginTop="20dp"/>
 
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/edt2Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:textColorHint="@color/colorWhite"
-            android:backgroundTint="@color/colorWhite"
-            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorMain"
+            android:backgroundTint="@color/colorMain"
+            android:textColor="@color/colorMain"
             android:layout_marginTop="20dp"/>
 
+        <CheckBox
+            android:id="@+id/chb2PrivacyPolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I have read and agree the Privacy Policy"
+            android:textColor="@color/colorMain"
+            android:layout_marginTop="20dp" />
+
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btn2SignUp"
             android:layout_width="200dp"
             android:layout_height="40dp"
-            android:textColor="@color/colorMain"
+            android:textColor="@color/colorWhite"
             android:layout_gravity="center"
-            android:text="@string/log_in"
+            android:text="SIGN UP"
             android:textSize="16sp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorMain"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:layout_marginTop="50dp"/>
 
         <Button
-            android:id="@+id/btnCreateAccount"
+            android:id="@+id/btn2LogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
-            android:textColor="@color/colorWhite"
-            android:text="@string/create_account"
+            android:textColor="@color/colorMain"
+            android:text="LOG IN"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
