@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
-        android:text="SIGN UP"
+        android:text="@string/sign_up"
         android:textColor="@color/colorMain"
         android:textSize="34sp"
         android:layout_marginTop="80dp"/>
@@ -25,7 +25,7 @@
         android:layout_marginBottom="60dp"
         android:layout_marginTop="4dp"
         android:fontFamily="sans-serif-light"
-        android:text="FOR YOUR ACCOUNT"
+        android:text="@string/for_your_account"
         android:textColor="@color/colorMain"
         android:textSize="16sp"
         android:letterSpacing="0.3"
@@ -43,7 +43,7 @@
             android:id="@+id/edt2Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="name"
+            android:hint="@string/name"
             android:singleLine="true"
             android:inputType="text"
             android:textColor="@color/colorMain"
@@ -77,7 +77,7 @@
             android:id="@+id/chb2PrivacyPolicy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I have read and agree the Privacy Policy"
+            android:text="@string/i_have_read_and_agree_the_privacy_policy"
             android:textColor="@color/colorMain"
             android:layout_marginTop="20dp" />
 
@@ -87,7 +87,7 @@
             android:layout_height="40dp"
             android:textColor="@color/colorWhite"
             android:layout_gravity="center"
-            android:text="SIGN UP"
+            android:text="@string/sign_up"
             android:textSize="16sp"
             android:background="@color/colorMain"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             style="@style/Widget.AppCompat.Button.Borderless.Colored"
             android:textColor="@color/colorMain"
-            android:text="LOG IN"
+            android:text="@string/log_in2"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"/>
     </LinearLayout>
