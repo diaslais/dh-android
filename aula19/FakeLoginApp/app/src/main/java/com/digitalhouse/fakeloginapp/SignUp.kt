@@ -24,14 +24,21 @@ class SignUp : AppCompatActivity() {
             val name = edt2Name.text.toString()
             val email = edt2Email.text.toString()
             val password = edt2Password.text.toString()
-            
 
-            try{
-                UserService.register(name, email, password)
-                Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_LONG).show()
-                finish()
-            } catch (e: Exception){
-                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+            if(name.isEmpty()){
+                edt2Name.error = "O nome deve ser preenchido"
+            } else if(email.isEmpty()) {
+                edt2Email.error = "O e-mail deve ser preenchido"
+            } else if(password.isEmpty()) {
+                edt2Password.error = "O password deve ser preenchido"
+            } else {
+                try{
+                    UserService.register(name, email, password)
+                    Toast.makeText(this, "Usuário cadastrado com sucesso!", Toast.LENGTH_LONG).show()
+                    finish()
+                } catch (e: Exception){
+                    Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+                }
             }
         }
     }
