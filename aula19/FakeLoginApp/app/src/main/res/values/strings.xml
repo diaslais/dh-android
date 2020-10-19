@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FakeLoginApp</string>
+    <string name="login">LOGIN</string>
+    <string name="to_continue">TO CONTINUE</string>
+    <string name="e_mail">e-mail</string>
+    <string name="password">password</string>
+    <string name="log_in">Log in</string>
+    <string name="create_account">Create Account</string>
+</resources>
