@@ -67,7 +67,6 @@
             android:layout_height="40dp"
             android:textColor="@color/colorMain"
             android:layout_gravity="center"
-            android:gravity="center"
             android:text="@string/log_in"
             android:textSize="16sp"
             android:background="@color/colorWhite"
