@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //view pager
         val pager = findViewById<ViewPager>(R.id.viewPager)
         val tab = findViewById<TabLayout>(R.id.tabLayout)
 
@@ -25,5 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         pager.adapter = Adapter(fragments, titulos, supportFragmentManager)
 
+        //botão Log In --> Toast
     }
 }

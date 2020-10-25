@@ -38,11 +38,11 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btnSignInSignIn"
+            android:id="@+id/btnLogInSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:text="Sign In"/>
+            android:text="Log In"/>
 
     </LinearLayout>
 

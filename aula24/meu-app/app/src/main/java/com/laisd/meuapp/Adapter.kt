@@ -13,7 +13,6 @@ class Adapter(
     //quantidade de tabs
     override fun getItem(position: Int) = fragments[position]
 
-    //retorna o fragment correspondente à posição
     override fun getCount() = fragments.size
 
     override fun getPageTitle(position: Int) = titulos[position]
