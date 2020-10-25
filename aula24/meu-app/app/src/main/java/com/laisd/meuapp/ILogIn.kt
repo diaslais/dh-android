@@ -1,5 +1,5 @@
 package com.laisd.meuapp
 
 interface ILogIn {
-    fun logIn()
+    fun logIn(username: String, password: String)
 }

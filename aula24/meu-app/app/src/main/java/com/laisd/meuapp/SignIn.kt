@@ -29,7 +29,9 @@ class SignIn : Fragment() {
         val view = inflater.inflate(R.layout.fragment_sign_in, container, false)
 
         view.btnLogInSignIn.setOnClickListener {
-            iLogIn.logIn()
+            val user = view.txtInputUsernameSIgnIn.editText?.text.toString()
+            val password = view.txtInputPasswordSignIn.editText?.text.toString()
+            iLogIn.logIn(user, password)
         }
 
         return view
