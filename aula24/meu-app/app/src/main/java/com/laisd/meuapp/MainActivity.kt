@@ -18,16 +18,6 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //elementos xml do fragment sign in
-        val usernameSignIn = findViewById<TextInputLayout>(R.id.txtInputUsernameSIgnIn)
-        val passwordSignIn = findViewById<TextInputLayout>(R.id.txtInputPasswordSignIn)
-        val btnLogIn = findViewById<Button>(R.id.btnLogInSignIn)
-
-        //elementos xml do fragment sign up
-        val usernameSignUp = findViewById<TextInputLayout>(R.id.txtInputUsernameSIgnUp)
-        val passwordSignUp = findViewById<TextInputLayout>(R.id.txtInputPasswordSignUp)
-        val confirmPasswordSignUp = findViewById<TextInputLayout>(R.id.txtInputConfirmPasswordSignUp)
-        val btnSignUp = findViewById<Button>(R.id.btnSignUpSignUp)
 
         //view pager
         val pager = findViewById<ViewPager>(R.id.viewPager)
@@ -50,7 +40,7 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
         } else if (password.isEmpty()){
             txtInputPasswordSignIn.error = "Password is required"
         } else {
-            Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Login Successful!", Toast.LENGTH_LONG).show()
         }
     }
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_sign_in.view.*
+import kotlinx.android.synthetic.main.fragment_sign_up.*
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -33,10 +34,8 @@ class SignUp : Fragment() {
             val user = signUpView.txtInputUsernameSIgnUp.editText?.text.toString()
             val password = signUpView.txtInputPasswordSignUp.editText?.text.toString()
             val confirmation = signUpView.txtInputConfirmPasswordSignUp.editText?.text.toString()
-
             iSignUp.signUp(user, password, confirmation, signUpView)
         }
-
         return signUpView
     }
 
