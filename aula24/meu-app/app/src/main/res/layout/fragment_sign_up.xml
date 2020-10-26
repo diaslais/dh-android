@@ -14,21 +14,23 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtInputUsernameSIgnUp"
+            android:id="@+id/txtLayoutUsernameSIgnUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEdtUsernameSIgnUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtInputPasswordSignUp"
+            android:id="@+id/txtLayoutPasswordSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEdtPasswordSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -36,11 +38,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtInputConfirmPasswordSignUp"
+            android:id="@+id/txtLayoutConfirmPasswordSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/confirmpassword">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtEdtConfirmPasswordSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -58,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
+            android:enabled="false"
             android:text="Sign up"/>
     </LinearLayout>
 

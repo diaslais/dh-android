@@ -36,27 +36,16 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
     }
 
     override fun logIn(username: String, password: String) {
-        if (username.isEmpty()){
-            txtInputUsernameSIgnIn.error = "Username is required"
-        } else if (password.isEmpty()){
-            txtInputPasswordSignIn.error = "Password is required"
-        } else {
+        val login = UserService.logIn(username, password)
+        if (login != null) {
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(this, "Invalid username or password", Toast.LENGTH_LONG).show()
         }
     }
-
     override fun signUp(username: String, password: String, confirm: String, view: View) {
-        if (username.isEmpty()){
-            txtInputUsernameSIgnUp.error = "Username is required"
-        } else if (password.isEmpty()){
-            txtInputPasswordSignUp.error = "Password is required"
-        } else if (confirm.isEmpty()){
-            txtInputConfirmPasswordSignUp.error = "Password confirmation is required"
-        } else if (!confirm.equals(password)){
-            txtInputConfirmPasswordSignUp.error = "Password mismatch"
-        } else {
-            Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
-        }
+        UserService.register(username, password)
+        Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
     }
 
 }

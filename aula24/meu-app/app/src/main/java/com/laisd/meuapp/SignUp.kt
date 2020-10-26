@@ -6,9 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.Toast
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.fragment_sign_in.view.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import kotlinx.android.synthetic.main.fragment_sign_up.view.*
+import java.lang.Exception
+import kotlin.math.sign
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,24 +36,33 @@ class SignUp : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val signUpView = inflater.inflate(R.layout.fragment_sign_up, container, false)
-
-        signUpView.btnSignUpSignUp.setOnClickListener {
-            val user = signUpView.txtInputUsernameSIgnUp.editText?.text.toString()
-            val password = signUpView.txtInputPasswordSignUp.editText?.text.toString()
-            val confirmation = signUpView.txtInputConfirmPasswordSignUp.editText?.text.toString()
-            iSignUp.signUp(user, password, confirmation, signUpView)
-        }
+        signUpClick(signUpView)
         return signUpView
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SignUp().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    fun signUpClick(signUpView: View){
+        val btnSignUp = signUpView.findViewById<Button>(R.id.btnSignUpSignUp)
+        val checkBox = signUpView.findViewById<CheckBox>(R.id.checkAgreeSignUp)
+        checkBox.setOnCheckedChangeListener{ _, isChecked ->
+            btnSignUp.isEnabled = isChecked
+        }
+
+        btnSignUp.setOnClickListener {
+            val user = signUpView.findViewById<TextInputEditText>(R.id.txtEdtUsernameSIgnUp)
+            val password = signUpView.findViewById<TextInputEditText>(R.id.txtEdtPasswordSignUp)
+            val confirmation = signUpView.findViewById<TextInputEditText>(R.id.txtEdtConfirmPasswordSignUp)
+
+            if (user.text.toString().isEmpty()){
+                user.error = "Username is required"
+            } else if (password.text.toString().isEmpty()){
+                password.error = "Password is required"
+            } else if (confirmation.text.toString().isEmpty()){
+                confirmation.error = "Password confirmation is required"
+            } else if (!confirmation.text.toString().equals(password.text.toString())){
+                confirmation.error = "Password mismatch"
+            } else {
+                iSignUp.signUp(user.text.toString(), password.text.toString(), confirmation.text.toString(), signUpView)
             }
+        }
     }
 }
