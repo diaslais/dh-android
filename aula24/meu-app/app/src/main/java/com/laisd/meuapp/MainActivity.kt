@@ -14,6 +14,7 @@ import com.laisd.meuapp.users.UserService
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import org.w3c.dom.Text
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +37,12 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
     }
 
     override fun signUp(username: String, password: String, confirm: String, view: View) {
-        UserService.register(username, password)
-        Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
+        try{
+            UserService.register(username, password)
+            Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
+        } catch (e: Exception){
+            Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun logIn(username: String, password: String) {
