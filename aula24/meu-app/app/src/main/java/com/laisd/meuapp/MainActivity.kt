@@ -35,6 +35,11 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
         pager.adapter = Adapter(fragments, titulos, supportFragmentManager)
     }
 
+    override fun signUp(username: String, password: String, confirm: String, view: View) {
+        UserService.register(username, password)
+        Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
+    }
+
     override fun logIn(username: String, password: String) {
         val login = UserService.logIn(username, password)
         if (login != null) {
@@ -42,10 +47,6 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
         } else {
             Toast.makeText(this, "Invalid username or password", Toast.LENGTH_LONG).show()
         }
-    }
-    override fun signUp(username: String, password: String, confirm: String, view: View) {
-        UserService.register(username, password)
-        Snackbar.make(view, "Username successfully created", Snackbar.LENGTH_LONG).show()
     }
 
 }

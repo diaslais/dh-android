@@ -5,7 +5,7 @@ import java.lang.Exception
 class UserService {
     companion object {
 
-        private val users = arrayListOf<UserModel>()
+        val users = arrayListOf<UserModel>()
 
         /**
          * Realiza login
@@ -29,7 +29,7 @@ class UserService {
                 throw Exception("This username already exists")
             }
 
-            users.add(UserModel(username, password))
+            users.add(UserModel(username.toLowerCase(), password))
         }
     }
 }

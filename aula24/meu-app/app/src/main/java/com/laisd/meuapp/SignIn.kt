@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.google.android.material.textfield.TextInputEditText
 import kotlinx.android.synthetic.main.fragment_sign_in.view.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -26,15 +28,26 @@ class SignIn : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_sign_in, container, false)
+        val signInView = inflater.inflate(R.layout.fragment_sign_in, container, false)
 
-        view.btnLogInSignIn.setOnClickListener {
-            val user = view.txtInputUsernameSIgnIn.editText?.text.toString()
-            val password = view.txtInputPasswordSignIn.editText?.text.toString()
-            iLogIn.logIn(user, password)
-        }
+        signInClick(signInView)
 
-        return view
+        return signInView
     }
 
+    fun signInClick(signInView: View){
+        val user = signInView.findViewById<TextInputEditText>(R.id.txtEdtUsernameSignIn)
+        val password = signInView.findViewById<TextInputEditText>(R.id.txtEdtPasswordSignIn)
+        val btnLogIn = signInView.findViewById<Button>(R.id.btnLogInSignIn)
+
+        btnLogIn.setOnClickListener {
+            if (user.text.toString().isEmpty()){
+                user.error = "Username is required"
+            } else if (password.text.toString().isEmpty()){
+                password.error = "Password is required"
+            } else {
+                iLogIn.logIn(user.text.toString(), password.text.toString())
+            }
+        }
+    }
 }
