@@ -10,6 +10,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.textfield.TextInputLayout
+import com.laisd.meuapp.users.UserService
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 import org.w3c.dom.Text

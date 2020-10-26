@@ -10,26 +10,26 @@ class UserService {
         /**
          * Realiza login
          */
-        fun logIn(email: String, password: String): UserModel? {
+        fun logIn(username: String, password: String): UserModel? {
             return users.find {
-                it.email == email.toLowerCase().trim() && it.password == password
+                it.username == username.toLowerCase().trim() && it.password == password
             }
         }
 
         /**
          * Registra um usuário
          */
-        fun register(name: String, email: String, password: String) {
+        fun register(username: String, password: String) {
             // Verifica se já existe usuário com email cadastrado
             val user = users.find {
-                it.email == email.toLowerCase().trim()
+                it.username == username.toLowerCase().trim()
             }
 
             if (user != null) {
-                throw Exception("This e-mail already exists")
+                throw Exception("This username already exists")
             }
 
-            users.add(UserModel(name, email.toLowerCase().trim(), password))
+            users.add(UserModel(username, password))
         }
     }
 }
