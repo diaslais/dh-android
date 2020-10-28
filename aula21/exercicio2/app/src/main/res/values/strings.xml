@@ -5,5 +5,6 @@
     <string name="nome">Nome</string>
     <string name="ano">Ano de nascimento</string>
     <string name="calcular_idade">Calcular idade</string>
-    <string name="result">%s, você tem %d ano(s).</string>
+    <string name="resultado">%s, você tem %d ano(s)</string>
+    <string name="nao_nasceu">%s ainda não nasceu!</string>
 </resources>

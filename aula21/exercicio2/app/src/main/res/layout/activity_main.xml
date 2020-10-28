@@ -8,13 +8,13 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/containerA"
+        android:id="@+id/containerEntrada"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"/>
 
     <FrameLayout
-        android:id="@+id/containerB"
+        android:id="@+id/containerSaida"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
