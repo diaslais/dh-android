@@ -53,5 +53,4 @@ class MainActivity : AppCompatActivity(), ILogIn, ISignUp {
             Toast.makeText(this, "Invalid username or password", Toast.LENGTH_LONG).show()
         }
     }
-
 }
