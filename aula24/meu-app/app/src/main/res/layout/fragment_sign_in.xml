@@ -17,6 +17,7 @@
             android:id="@+id/txtLayoutUsernameSIgnIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:errorEnabled="true"
             android:hint="@string/username">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtEdtUsernameSignIn"
@@ -28,6 +29,7 @@
             android:id="@+id/txtLayouttPasswordSignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:errorEnabled="true"
             android:hint="@string/password"
             app:endIconMode="password_toggle">
             <com.google.android.material.textfield.TextInputEditText
