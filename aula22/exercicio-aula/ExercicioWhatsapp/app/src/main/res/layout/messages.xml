@@ -33,6 +33,7 @@
             android:paddingStart="15dp"
             android:paddingVertical="15dp">
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -40,12 +41,14 @@
                 android:text="Nome"/>
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/txtMensagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Essa foi minha mensagem! :)"/>
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
