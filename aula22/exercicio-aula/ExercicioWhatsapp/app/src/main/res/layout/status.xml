@@ -14,13 +14,12 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:elevation="12dp"
-            android:id="@+id/view2"
             app:cardCornerRadius="40dp"
             android:innerRadius="0dp"
             android:shape="ring"
             android:thicknessRatio="1.9">
             <ImageView
-                android:id="@+id/msgImageView"
+                android:id="@+id/imgStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/image_1" />
@@ -33,7 +32,7 @@
             android:paddingStart="15dp"
             android:paddingVertical="15dp">
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtNome"
+                android:id="@+id/txtStatusNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -41,7 +40,7 @@
                 android:text="Nome"/>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtMensagem"
+                android:id="@+id/txtStatusMensagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today, 00:04"/>

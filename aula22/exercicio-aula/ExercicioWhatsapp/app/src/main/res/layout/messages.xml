@@ -20,7 +20,7 @@
             android:shape="ring"
             android:thicknessRatio="1.9">
             <ImageView
-                android:id="@+id/msgImageView"
+                android:id="@+id/imgMensagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/image_1" />
@@ -33,7 +33,7 @@
             android:paddingStart="15dp"
             android:paddingVertical="15dp">
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtNome"
+                android:id="@+id/txtMensagemNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -41,14 +41,14 @@
                 android:text="Nome"/>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtMensagem"
+                android:id="@+id/txtMensagemMensagem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Essa foi minha mensagem! :)"/>
         </LinearLayout>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/txtData"
+            android:id="@+id/txtMensagemData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
