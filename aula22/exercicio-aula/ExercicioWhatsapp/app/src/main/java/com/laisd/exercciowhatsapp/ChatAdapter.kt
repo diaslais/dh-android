@@ -10,10 +10,10 @@ import com.google.android.material.textview.MaterialTextView
 class ChatAdapter(private val dataSet: List<Mensagem>): RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
 
     class ChatViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        private val fotoChat by lazy { itemView.findViewById<ImageView>(R.id.imgMensagem) }
-        private val nomeChat by lazy { itemView.findViewById<MaterialTextView>(R.id.txtMensagemNome) }
-        private val mensagemChat by lazy { itemView.findViewById<MaterialTextView>(R.id.txtMensagemMensagem) }
-        private val dataChat by lazy { itemView.findViewById<MaterialTextView>(R.id.txtMensagemData) }
+        private var fotoChat = itemView.findViewById<ImageView>(R.id.imgMensagem)
+        private var nomeChat = itemView.findViewById<MaterialTextView>(R.id.txtMensagemNome)
+        private var mensagemChat = itemView.findViewById<MaterialTextView>(R.id.txtMensagemMensagem)
+        private var dataChat = itemView.findViewById<MaterialTextView>(R.id.txtMensagemData)
 
         fun bind(mensagem: Mensagem){
             fotoChat.setImageResource(mensagem.imagemSrc)

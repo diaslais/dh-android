@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="80dp"
@@ -35,7 +36,7 @@
                 android:text="Nome"/>
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/txtStatusMensagem"
+                android:id="@+id/txtStatusData"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today, 00:04"/>
