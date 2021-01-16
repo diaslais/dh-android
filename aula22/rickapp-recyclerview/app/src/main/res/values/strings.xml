@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RickApp Recyclerview</string>
+    <string name="location">Location:</string>
+    <string name="traco">-</string>
+</resources>
